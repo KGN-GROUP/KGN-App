@@ -1,0 +1,15 @@
+# Live launch checklist
+- [ ] Set up Firebase project; enable Phone and Email authentication.
+- [ ] Configure database and strict role-based security rules.
+- [ ] Configure private document/photo storage; vendors must not see customer private files.
+- [ ] Connect Saudi payment provider and verify payments server-side/webhook-first.
+- [ ] Enforce assigned-vendor authorization before returning customer phone/address/location.
+- [ ] Add Google Maps key and restrict it to app/site.
+- [ ] Configure push notifications.
+- [ ] Choose audio/video calling provider and secure call-token service.
+- [ ] Add final KGN logo, licensed service photos, gallery assets, and translations.
+- [ ] Add company-approved Privacy Policy, Terms, Vendor Terms, refund/payment policy.
+- [ ] Configure production domain, HTTPS, monitoring, backups and logging.
+- [ ] Test APK/AAB on real Android devices and iOS build on a Mac.
+- [ ] For App Store distribution, configure Apple Developer signing and App Store Connect.
+- [ ] For Google Play, configure Play Console signing and store listing.
