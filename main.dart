@@ -281,7 +281,7 @@ class _QuoteScreenState extends State<QuoteScreen>{
   @override Widget build(BuildContext context)=>Scaffold(
     appBar:AppBar(title:const Text('Get Quotation'),backgroundColor:brandBlue,foregroundColor:Colors.white),
     body:ListView(padding:const EdgeInsets.all(16),children:[
-      DropdownButtonFormField<String>(value:selected,decoration:const InputDecoration(labelText:'Service Category',border:OutlineInputBorder()),
+      DropdownButtonFormField<String>(initialValue: selected,decoration:const InputDecoration(labelText:'Service Category',border:OutlineInputBorder()),
         items:services.map((s)=>DropdownMenuItem(value:s['name'],child:Text(s['name']!))).toList(),
         onChanged:(v)=>setState(()=>selected=v!)),
       const SizedBox(height:12),
