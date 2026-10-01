@@ -113,7 +113,7 @@ class HomeScreen extends StatelessWidget {
             ));
           },
         ),
-        onst Padding(
+        const Padding(
           padding: EdgeInsets.fromLTRB(16, 20, 16, 8),
           child: Text(
             'Vendor & Company',
