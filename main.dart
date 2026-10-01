@@ -233,18 +233,46 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-    bottomNavigationBar:BottomNavigationBar(
-      selectedItemColor:brandBlue,
-      items:const[
-        BottomNavigationBarItem(icon:Icon(Icons.home),label:'Home'),
-        BottomNavigationBarItem(icon:Icon(Icons.search),label:'Search'),
-        BottomNavigationBarItem(icon:Icon(Icons.receipt_long),label:'Requests'),
-        BottomNavigationBarItem(icon:Icon(Icons.person),label:'Profile'),
-      ],
-      onTap:(i){if(i==2)Navigator.push(context,MaterialPageRoute(builder:(_)=>const RequestsScreen()));
-        if(i==3)Navigator.push(context,MaterialPageRoute(builder:(_)=>const VendorScreen()));},
+    bottomNavigationBar: BottomNavigationBar(
+  selectedItemColor: brandBlue,
+  type: BottomNavigationBarType.fixed,
+  items: const [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
     ),
-  );
+    BottomNavigationBarItem(
+      icon: Icon(Icons.search),
+      label: 'Search',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.receipt_long),
+      label: 'Requests',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      label: 'Profile',
+    ),
+  ],
+  onTap: (i) {
+    if (i == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const RequestsScreen(),
+        ),
+      );
+    }
+    if (i == 3) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const VendorScreen(),
+        ),
+      );
+    }
+  },
+),
 
   void _show(BuildContext c,String title,String message)=>showDialog(context:c,builder:(_)=>AlertDialog(
     title:Text(title),content:Text(message),actions:[TextButton(onPressed:()=>Navigator.pop(c),child:const Text('OK'))]));
