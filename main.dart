@@ -113,38 +113,126 @@ class HomeScreen extends StatelessWidget {
             ));
           },
         ),
-        const Padding(padding:EdgeInsets.fromLTRB(16,20,16,8),
-          child:Text('Vendor & Company',style:TextStyle(fontSize:21,fontWeight:FontWeight.bold,color:brandBlue))),
-        Card(child:ListTile(leading:const Icon(Icons.storefront,color:brandBlue),
-          title:const Text('Vendor Registration / Login'),subtitle:const Text('OTP, email and document submission'),
-          trailing:const Icon(Icons.chevron_right),onTap:()=>Navigator.push(context,
-            MaterialPageRoute(builder:(_)=>const VendorScreen())))),
-        Card(child:ListTile(leading:const Icon(Icons.info_outline,color:brandBlue),
-          title:const Text('About KGN GROUP'),subtitle:const Text('Your trusted service partner in Al Qassim / Unaizah'),
-          onTap:()=>_show(context,'About Us','KGN GROUP provides professional service, installation, repair and maintenance solutions.')),
-        Card(child:ListTile(leading:const Icon(Icons.photo_library,color:brandBlue),
-          title:const Text('Gallery'),subtitle:const Text('Worksite photos and videos'),
-          onTap:()=>_show(context,'Gallery','Connect the approved KGN GROUP gallery through the admin panel.')),
-        Card(child:ListTile(leading:const Icon(Icons.feedback,color:brandBlue),
-          title:const Text('Feedback'),subtitle:const Text('Share your service experience'),
-          onTap:()=>_show(context,'Feedback','Feedback submission will be connected to the API.')),
-        Padding(padding:const EdgeInsets.all(12),child:Card(child:Padding(
-          padding:const EdgeInsets.all(16),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-            const Text('Contact KGN GROUP',style:TextStyle(fontSize:19,fontWeight:FontWeight.bold)),
-            const SizedBox(height:8),
-            const Text('Al Qassim / Unaizah, Saudi Arabia'),
-            const Text('kgngroupinfo@gmail.com'),
-            const SizedBox(height:12),
-            Wrap(spacing:8,runSpacing:8,children:[
-              FilledButton.icon(onPressed:()=>_open('tel:+966568778195'),icon:const Icon(Icons.call),label:const Text('Inquiry')),
-              FilledButton.icon(onPressed:()=>_open('tel:+966541337646'),icon:const Icon(Icons.support_agent),label:const Text('Support')),
-              OutlinedButton.icon(onPressed:()=>_open('https://wa.me/966568778195'),icon:const Icon(Icons.chat),label:const Text('WhatsApp')),
-              OutlinedButton.icon(onPressed:()=>_open('https://www.google.com/maps/search/?api=1&query=Unaizah%2C%20Al%20Qassim%2C%20Saudi%20Arabia'),
-                icon:const Icon(Icons.location_on),label:const Text('Google Location')),
-            ])
-          ])))),
-      ],
-    ),
+        onst Padding(
+          padding: EdgeInsets.fromLTRB(16, 20, 16, 8),
+          child: Text(
+            'Vendor & Company',
+            style: TextStyle(
+              fontSize: 21,
+              fontWeight: FontWeight.bold,
+              color: brandBlue,
+            ),
+          ),
+        ),
+
+        Card(
+          child: ListTile(
+            leading: const Icon(Icons.storefront, color: brandBlue),
+            title: const Text('Vendor Registration / Login'),
+            subtitle: const Text('OTP, email and document submission'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const VendorScreen(),
+              ),
+            ),
+          ),
+        ),
+
+        Card(
+          child: ListTile(
+            leading: const Icon(Icons.info_outline, color: brandBlue),
+            title: const Text('About KGN GROUP'),
+            subtitle: const Text(
+              'Your trusted service partner in Al Qassim / Unaizah',
+            ),
+            onTap: () => _show(
+              context,
+              'About Us',
+              'KGN GROUP provides professional service, installation, repair and maintenance solutions.',
+            ),
+          ),
+        ),
+
+        Card(
+          child: ListTile(
+            leading: const Icon(Icons.photo_library, color: brandBlue),
+            title: const Text('Gallery'),
+            subtitle: const Text('Worksite photos and videos'),
+            onTap: () => _show(
+              context,
+              'Gallery',
+              'Connect the approved KGN GROUP gallery through the admin panel.',
+            ),
+          ),
+        ),
+
+        Card(
+          child: ListTile(
+            leading: const Icon(Icons.feedback, color: brandBlue),
+            title: const Text('Feedback'),
+            subtitle: const Text('Share your service experience'),
+            onTap: () => _show(
+              context,
+              'Feedback',
+              'Feedback submission will be connected to the API.',
+            ),
+          ),
+        ),
+
+        Padding(
+          padding: const EdgeInsets.all(12),
+          child: Card(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Contact KGN GROUP',
+                    style: TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  const Text('Al Qassim / Unaizah, Saudi Arabia'),
+                  const Text('kgngroupinfo@gmail.com'),
+                  const SizedBox(height: 12),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      FilledButton.icon(
+                        onPressed: () => _open('tel:+966568778195'),
+                        icon: const Icon(Icons.call),
+                        label: const Text('Inquiry'),
+                      ),
+                      FilledButton.icon(
+                        onPressed: () => _open('tel:+966541337646'),
+                        icon: const Icon(Icons.support_agent),
+                        label: const Text('Support'),
+                      ),
+                      OutlinedButton.icon(
+                        onPressed: () => _open('https://wa.me/966568778195'),
+                        icon: const Icon(Icons.chat),
+                        label: const Text('WhatsApp'),
+                      ),
+                      OutlinedButton.icon(
+                        onPressed: () => _open(
+                          'https://www.google.com/maps/search/?api=1&query=Unaizah%2C%20Al%20Qassim%2C%20Saudi%20Arabia',
+                        ),
+                        icon: const Icon(Icons.location_on),
+                        label: const Text('Google Location'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
     bottomNavigationBar:BottomNavigationBar(
       selectedItemColor:brandBlue,
       items:const[
